@@ -579,13 +579,11 @@ body {
 	transform: translate(-50%, -50%);
 }
 .modal-close {
-	/* display: block;*/
-
-	width: 24px;
-	height: 24px;
 	position: absolute;
 	top: 24px;
 	right: 24px;
+	width: 24px;
+	height: 24px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
