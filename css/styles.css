@@ -216,13 +216,14 @@ body {
 	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 	min-width: 169px;
 
-	transition-property: background-color;
+	transition-property: background-color, opacity;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
 	background-color: var(--pressed-state);
+	opacity: 0.9;
 }
 
 /* Section 1 */
@@ -561,6 +562,10 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
+
+	transition: opacity, visibility, transform;
+	transition-duration: 2500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
 	min-width: 408px;
@@ -574,20 +579,21 @@ body {
 	transform: translate(-50%, -50%);
 }
 .modal-close {
-	display: block;
+	/* display: block;*/
 
 	width: 24px;
 	height: 24px;
+	position: absolute;
+	top: 24px;
+	right: 24px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-
-	margin-top: 24px;
-	margin-left: auto;
-	margin-right: 24px;
-
-	/* justify-content: center;
-	align-items: center; */
+	cursor: pointer;
 }
-
 .modal-icon {
+}
+.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
