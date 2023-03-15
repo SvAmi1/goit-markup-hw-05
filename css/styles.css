@@ -574,7 +574,6 @@ body {
 	min-height: 576px;
 	background-color: #fcfcfc;
 	border-radius: 4px;
-	padding: ;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -589,20 +588,24 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
+	background-color: var(--accent);
+	color: var(--hero-background);
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	transition: transform, color;
+	transition: transform, color, background-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:is(:hover, :focus) {
 	transform: scale(1.2);
-	color: var(--pressed-state);
+	background-color: var(--pressed-state);
+	color: var(--light);
 }
 .modal-icon {
+	fill: currentColor;
 }
 .is-hidden {
 	opacity: 0;
