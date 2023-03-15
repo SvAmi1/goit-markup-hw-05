@@ -594,12 +594,13 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	transition: transform;
+	transition: transform, color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:is(:hover, :focus) {
 	transform: scale(1.2);
+	color: var(--pressed-state);
 }
 .modal-icon {
 }
