@@ -139,7 +139,9 @@ body {
 	padding-bottom: 24px;
 
 	position: relative;
-	/* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.header-link:is(:hover, :focus) {
+	color: var(--pressed-state);
 }
 .current {
 	color: var(--pressed-state);
@@ -564,7 +566,7 @@ body {
 	left: 0;
 
 	transition: opacity, visibility, transform;
-	transition-duration: 2500ms;
+	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
@@ -587,6 +589,17 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:is(:hover, :focus) {
+	transform: scale(1.2);
 }
 .modal-icon {
 }
